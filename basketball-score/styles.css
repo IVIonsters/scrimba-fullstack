@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0c4a6e;
+}
+
+/* Container around app */
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Home / Guest Text */
+h3 {
+  text-align: center;
+  color: white;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+  border-bottom: 3px solid #9aabd8;
+  width: 155px;
+  margin-bottom: 15px;
+}
+
+/* score container */
+.scoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 120px;
+  width: 155px;
+  font-family: "Bitcount Single Ink", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+/* add border for leader */
+.leader {
+  border: dashed red 2px;
+}
+
+/* Tie Game */
+.tieGame {
+  border: solid yellow 2px;
+}
+
+/* Increment Container */
+.incrementContainer {
+  width: 155px;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/* increment button styling */
+.addScore {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  color: #9aabd8;
+  border: 2px solid #9aabd8;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.addScore:hover {
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.addScore:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset Button */
+#resetButton {
+  display: block;
+  margin: 20px auto;
+  width: 70px;
+  height: 45px;
+  background-color: transparent;
+  color: #9aabd8;
+  border: 2px solid #9aabd8;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#resetButton:hover {
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#resetButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}

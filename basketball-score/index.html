@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <title>Basketball Scores</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h3>HOME</h3>
+        <div
+          class="scoreContainer"
+          id="homeScore"
+        >
+          0
+        </div>
+        <div class="incrementContainer">
+          <button
+            class="addScore"
+            onclick="incrementOneHome()"
+          >
+            +1
+          </button>
+          <button
+            class="addScore"
+            onclick="incrementTwoHome()"
+          >
+            +2
+          </button>
+          <button
+            class="addScore"
+            onclick="incrementThreeHome()"
+          >
+            +3
+          </button>
+        </div>
+      </div>
+      <div>
+        <h3>GUEST</h3>
+        <div
+          class="scoreContainer"
+          id="guestScore"
+        >
+          0
+        </div>
+        <div class="incrementContainer">
+          <button
+            class="addScore"
+            onclick="incrementOneGuest()"
+          >
+            +1
+          </button>
+          <button
+            class="addScore"
+            onclick="incrementTwoGuest()"
+          >
+            +2
+          </button>
+          <button
+            class="addScore"
+            onclick="incrementThreeGuest()"
+          >
+            +3
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      id="resetButton"
+      onclick="resetScores()"
+    >
+      Reset Scores
+    </button>
+    <script src="app.js"></script>
+  </body>
+</html>
+
