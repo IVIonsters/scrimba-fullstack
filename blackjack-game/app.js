@@ -3,17 +3,30 @@ let firstCard = 10;
 let secondCard = 7;
 let sum = firstCard + secondCard;
 
-// if less than or equal to 20 -> "Do you want to draw a new card? 🙂"
-// else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
-// else -> "You're out of the game! 😭"
+// Booleans
+let hasBlackJack = false;
+let isAlive = true;
+
+//String variables
+let message = "";
 
 function cardSum() {
   if (sum <= 20) {
-    console.log("Do you want to draw a new card?🙂");
+    message = "Do you want to draw a new card?🙂";
   } else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack!🥳");
+    message = "Wohoo! You've got Blackjack!🥳";
+    hasBlackJack = true;
   } else {
-    console.log("You're out of the game! 😭");
+    message = "You're out of the game! 😭";
+    isAlive = false;
   }
+  //log player choice - cardSum()
+  console.log(message);
 }
 cardSum();
+
+// Cash out
+console.log("BlackJack Status", hasBlackJack);
+
+//Player out
+console.log("Player Status", isAlive);
