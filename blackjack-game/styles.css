@@ -10,10 +10,19 @@ body {
   font-size: 1.5em;
 }
 
+/* BlackJack */
 h1 {
   color: goldenrod;
 }
 
+/* Want to play a round? */
 #message-el {
   font-style: italic;
+}
+
+/* Start Game Button */
+button {
+  color: #016f32;
+  width: 150px;
+  background-color: goldenrod;
 }
