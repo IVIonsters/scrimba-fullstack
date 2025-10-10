@@ -23,6 +23,7 @@ function startGame() {
 
 // Update Game Context
 function renderGame() {
+  // Create a for loop that renders out all the cards instead of just two
   if (sum <= 20) {
     message = "Do you want to draw a new card?🙂";
   } else if (sum === 21) {
@@ -32,9 +33,12 @@ function renderGame() {
     message = "You're out of the game! 😭";
     isAlive = false;
   }
-  sumEl.innerText = sum;
-  messageEl.innerText = message;
-  cardsEl.innerText = cards[0] + " - " + cards[1];
+  cardsEl.textContent = "Cards: ";
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " ";
+  }
+  sumEl.textContent = "Sum: " + sum;
+  messageEl.textContent = message;
 }
 
 // Cash out
@@ -47,6 +51,8 @@ console.log("Player Status", isAlive);
 function newCard() {
   console.log("Drawing a new card from the deck!");
   let card = 4;
-  sum = sum + card;
+  sum += card;
+  cards.push(card);
+  console.log(cards);
   renderGame();
 }
