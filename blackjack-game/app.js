@@ -1,6 +1,6 @@
 // Card Variables
-let firstCard = 10;
-let secondCard = 7;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let sum = firstCard + secondCard;
 let cards = [firstCard, secondCard];
 
@@ -19,6 +19,21 @@ let cardsEl = document.getElementById("cards-el");
 // Start Game
 function startGame() {
   renderGame();
+}
+
+// Generate Random Cards
+function getRandomCard() {
+  let randomCard = Math.floor(Math.random() * 13) + 1;
+  if (randomCard === 1) {
+    console.log("Ace Hit");
+    return 1;
+  } else if (randomCard > 10) {
+    console.log("King, Queen, Jack Hit");
+    return 10;
+  } else {
+    console.log("Numbers 2-10");
+    return randomCard;
+  }
 }
 
 // Update Game Context
@@ -50,7 +65,7 @@ console.log("Player Status", isAlive);
 // New Card
 function newCard() {
   console.log("Drawing a new card from the deck!");
-  let card = 4;
+  let card = getRandomCard();
   sum += card;
   cards.push(card);
   console.log(cards);
