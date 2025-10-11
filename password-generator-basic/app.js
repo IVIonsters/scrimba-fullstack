@@ -6,13 +6,14 @@ const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 let result = "";
 
 //Elements
+let passwordLength = document.getElementById("password-length");
 let passwordOne = document.getElementById("display-one");
 let passwordTwo = document.getElementById("display-two");
 
 //Generate Password
 function generatePassword() {
   let result = "";
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < passwordLength.value; i++) {
     let randomIndex = Math.floor(Math.random() * characters.length);
     result += characters[randomIndex];
   }
@@ -22,6 +23,17 @@ function generatePassword() {
 
 // Display Passwords
 function displayPasswords() {
+  //grab password input
+  let length = parseInt(passwordLength.value);
+
+  if (isNaN(length) || length < 12) {
+    length = 12;
+    passwordLength.value = 12;
+  } else if (length > 32) {
+    length = 32;
+    passwordLength.value = 32;
+  }
+
   let firstPassword = generatePassword();
   let secondPassword = generatePassword();
 

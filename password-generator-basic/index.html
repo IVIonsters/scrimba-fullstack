@@ -16,6 +16,11 @@
     <main class="ui-container">
       <h1 class="password-text">Generate a Random Password</h1>
       <p>Never use and insecure password again</p>
+      <input
+        type="text"
+        id="password-length"
+        placeholder="password length"
+      />
       <button
         class="generate-password"
         onclick="displayPasswords()"
@@ -23,28 +28,16 @@
         Generate
       </button>
       <hr />
-      <p id="display-one"></p>
-      <p id="display-two"></p>
+      <p id="display-one">Password</p>
+      <p id="display-two">Password</p>
     </main>
     <script src="app.js"></script>
   </body>
 </html>
 
-<!--  
-Two Passwords on click feature
-15 Character length
--->
-
 <!-- 
-stretch goals
-ability to set password length
 toggle symbol , numbers, characters
 copy on click feature
 -->
 <!-- 3. In JS:
-
-
-    c. On click, read user settings (length, toggles).
-    d. Generate two random passwords.
-    e. Display passwords.
     f. Add copy-to-clipboard functionality. -->

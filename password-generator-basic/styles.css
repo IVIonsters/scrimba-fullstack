@@ -15,7 +15,7 @@ body {
 
 /* Main UI Container */
 .ui-container {
-  width: 80%;
+  width: 85%;
   max-width: 500px;
   height: auto;
   padding: 40px 30px;
@@ -67,9 +67,10 @@ hr {
   opacity: 0.5;
 }
 
-p {
+p,
+input {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   padding: 12px 15px;
   margin: 5px 0;
   background: rgba(255, 255, 255, 0.2);
