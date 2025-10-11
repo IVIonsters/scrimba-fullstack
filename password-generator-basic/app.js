@@ -41,3 +41,19 @@ function displayPasswords() {
   passwordOne.value = firstPassword;
   passwordTwo.value = secondPassword;
 }
+
+// Copy to clipboard
+function copyPassword(elementId) {
+  const element = document.getElementById(elementId);
+  element.select();
+  element.setSelectionRange(0, 99999);
+
+  navigator.clipboard
+    .writeText(element.value)
+    .then(() => {
+      alert(`Password copied: ${element.value}`);
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+}
