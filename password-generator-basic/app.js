@@ -38,6 +38,6 @@ function displayPasswords() {
   let secondPassword = generatePassword();
 
   //HTMl / DOM Changes
-  passwordOne.textContent = firstPassword;
-  passwordTwo.textContent = secondPassword;
+  passwordOne.value = firstPassword;
+  passwordTwo.value = secondPassword;
 }
