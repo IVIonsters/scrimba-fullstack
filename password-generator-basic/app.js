@@ -29,9 +29,9 @@ function displayPasswords() {
   if (isNaN(length) || length < 12) {
     length = 12;
     passwordLength.value = 12;
-  } else if (length > 32) {
-    length = 32;
-    passwordLength.value = 32;
+  } else if (length > 28) {
+    length = 28;
+    passwordLength.value = 28;
   }
 
   let firstPassword = generatePassword();

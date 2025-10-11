@@ -15,7 +15,7 @@ body {
 
 /* Main UI Container */
 .ui-container {
-  width: 85%;
+  width: 90%;
   max-width: 500px;
   height: auto;
   padding: 40px 30px;
@@ -82,4 +82,38 @@ input {
   outline: none;
   transition: all 0.3s ease;
   text-align: center;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 5px 0;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 5px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  top: 15%;
 }
