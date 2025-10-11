@@ -1,23 +1,34 @@
 // Card Variables
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let sum = firstCard + secondCard;
-let cards = [firstCard, secondCard];
+let sum = 0;
+let cards = [];
 
 // Booleans
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 
 //String variables
 let message = "";
+
+// objects
+let player = {
+  name: "Dan Savage",
+  chips: 150,
+};
 
 // Grab Elements
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
+let playerEl = document.getElementById("player-el");
 
 // Start Game
 function startGame() {
+  isAlive = true;
+  playerEl.innerText = player.name + " - Chips: $" + player.chips;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
   renderGame();
 }
 
@@ -64,10 +75,14 @@ console.log("Player Status", isAlive);
 
 // New Card
 function newCard() {
-  console.log("Drawing a new card from the deck!");
-  let card = getRandomCard();
-  sum += card;
-  cards.push(card);
-  console.log(cards);
-  renderGame();
+  if (isAlive === true && hasBlackJack === false) {
+    console.log("Drawing a new card from the deck!");
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    console.log(cards);
+    renderGame();
+  } else {
+    alert("Sorry! Player is out of the game, please restart!");
+  }
 }
