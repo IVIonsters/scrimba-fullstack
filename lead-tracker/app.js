@@ -6,12 +6,23 @@ let listItems = "";
 let saveButton = document.getElementById("input-btn");
 let inputEl = document.getElementById("input-el");
 let ulEl = document.getElementById("ul-el");
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+//Verify leads from localstorage
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  renderLeads();
+  console.log("leads detected in storage");
+} else {
+  console.log("no leads available");
+}
 
 //Event Listeners
 saveButton.addEventListener("click", function () {
   myLeads.push(inputEl.value);
-  renderLeads();
   inputEl.value = "";
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  renderLeads();
 });
 
 // Log out the items in the myLeads array using a for loop
@@ -26,6 +37,3 @@ function renderLeads() {
   }
   ulEl.innerHTML = listItems;
 }
-
-// Wrap the lead in an anchor tag (<a>) inside the <li>
-// Can you make the link open in a new tab?
