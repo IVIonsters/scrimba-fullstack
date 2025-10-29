@@ -3,11 +3,13 @@ let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
 let listItems = "";
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 let deleteBtn = document.getElementById("delete-btn");
+const tabs = [{ url: "https://www.youtube.com/watch?v=EiPYgiu8-Hc&t=1021s" }];
 
 //Elements
 let saveButton = document.getElementById("input-btn");
 let inputEl = document.getElementById("input-el");
 let ulEl = document.getElementById("ul-el");
+let saveTab = document.getElementById("tab-btn");
 
 //Verify leads from localstorage
 if (leadsFromLocalStorage) {
@@ -19,7 +21,6 @@ if (leadsFromLocalStorage) {
 }
 
 //Event Listeners
-
 // Save Button
 saveButton.addEventListener("click", function () {
   myLeads.push(inputEl.value);
@@ -28,10 +29,15 @@ saveButton.addEventListener("click", function () {
   render(myLeads);
 });
 
+//Tab Button
+saveTab.addEventListener("click", function () {
+  console.log(tabs[0].url);
+});
+
 // Delete Button
 deleteBtn.addEventListener("dblclick", function () {
   localStorage.clear();
-  myLeads = "";
+  myLeads = [];
   render(myLeads);
   console.log("Localstorage Cleared");
 });
