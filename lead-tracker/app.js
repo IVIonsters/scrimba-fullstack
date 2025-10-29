@@ -1,5 +1,5 @@
 // Main Variables
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
+let myLeads = [];
 let listItems = "";
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 let deleteBtn = document.getElementById("delete-btn");
@@ -31,7 +31,9 @@ saveButton.addEventListener("click", function () {
 
 //Tab Button
 saveTab.addEventListener("click", function () {
-  console.log(tabs[0].url);
+  myLeads.push(tabs[0].url);
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  render(myLeads);
 });
 
 // Delete Button
