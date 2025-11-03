@@ -6,6 +6,8 @@
 
 body {
   background-color: #f4f4f4;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* container for upper portion of page */
@@ -17,5 +19,54 @@ body {
   gap: 20px;
   padding: 30px;
   height: 285px;
+  width: 550px;
   background-color: #6943ff;
+  color: white;
+}
+
+/* Input Display Styling */
+input {
+  background-color: transparent;
+  border: 2px solid #b295ff;
+  width: 117px;
+  height: 83px;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 58px;
+  font-weight: bold;
+}
+
+/* Placeholder color */
+input::placeholder {
+  color: rgb(221, 221, 221);
+}
+
+/* input button */
+button {
+  height: 42px;
+  width: 117px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Conversion Display Container */
+.lengthContainer,
+.volumeContainer,
+.massContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #ffffff;
+  color: #5a537b;
+  height: 108px;
+  width: 500px;
+  margin: 20px;
+}
+
+/* Conversion Display Color */
+p {
+  color: #353535;
 }
