@@ -4,14 +4,6 @@
 1 kilogram = 2.204 pound
 */
 
-/* TO DO LIST
-function to convert number 
-expand function to multiple types
-round to 3 decimal places
-grab user input for function to convert
-make conversions display in HTML locations
-*/
-
 // Grab Elements
 const convert = document.getElementById("convertButton");
 const inputElement = document.getElementById("userInput");
