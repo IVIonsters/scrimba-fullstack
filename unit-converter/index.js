@@ -12,26 +12,27 @@ grab user input for function to convert
 make conversions display in HTML locations
 */
 
-// Variables
-
 // Grab Elements
-let convert = document.getElementById("convertButton");
+const convert = document.getElementById("convertButton");
+const inputElement = document.getElementById("userInput");
+
+// Variables
 
 // Event Listeners
 convert.addEventListener("click", convertFunction);
 
 function meterConversion() {
-  let meter = 10 * 3.281;
+  let meter = inputElement.value * 3.281;
   console.log(meter);
 }
 
 function literConversion() {
-  let liter = 10 * 0.264;
+  let liter = inputElement.value * 0.264;
   console.log(liter);
 }
 
 function kilogramConversion() {
-  let kilo = 10 * 2.205;
+  let kilo = inputElement.value * 2.205;
   console.log(kilo);
 }
 
