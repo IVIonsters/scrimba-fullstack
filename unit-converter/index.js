@@ -75,7 +75,10 @@ function massConversion() {
 
 function convertFunction() {
   if (inputElement.value > 0) {
-    lengthConversion(), volumeConversion(), massConversion();
+    lengthConversion(),
+      volumeConversion(),
+      massConversion(),
+      (inputElement.value = "");
   } else {
     console.log("no user input available", inputElement.value);
   }
