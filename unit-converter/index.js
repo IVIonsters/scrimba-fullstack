@@ -22,7 +22,7 @@ function lengthConversion() {
   let feet = inputElement.value / 3.281;
   let roundedMeter = Math.round(meter * 100) / 100;
   let roundedFeet = Math.round(feet * 100) / 100;
-  lengthDisplay.innerHTML =
+  lengthDisplay.textContent =
     inputElement.value +
     " meters = " +
     roundedMeter +
@@ -31,8 +31,8 @@ function lengthConversion() {
     " feet = " +
     roundedFeet +
     " meters";
-  console.log(roundedMeter, "Feet");
-  console.log(roundedFeet, "Meter");
+  // console.log(roundedMeter, "Feet");
+  // console.log(roundedFeet, "Meter");
 }
 
 // Function to convert Liters/Gallons
@@ -41,7 +41,7 @@ function volumeConversion() {
   let gallons = inputElement.value / 0.264;
   let roundedLiter = Math.round(liter * 100) / 100;
   let roundedGallons = Math.round(gallons * 100) / 100;
-  volumeDisplay.innerHTML =
+  volumeDisplay.textContent =
     inputElement.value +
     " liters = " +
     roundedLiter +
@@ -50,8 +50,8 @@ function volumeConversion() {
     " gallons = " +
     roundedGallons +
     " liters";
-  console.log(roundedLiter, "Gallons");
-  console.log(roundedGallons, "Liters");
+  // console.log(roundedLiter, "Gallons");
+  // console.log(roundedGallons, "Liters");
 }
 
 // Function to convert Kilograms/Pounds
@@ -60,7 +60,7 @@ function massConversion() {
   let pounds = inputElement.value / 2.205;
   let roundedKilo = Math.round(kilo * 100) / 100;
   let roundedPounds = Math.round(pounds * 100) / 100;
-  massDisplay.innerHTML =
+  massDisplay.textContent =
     inputElement.value +
     " kilos = " +
     roundedKilo +
@@ -69,16 +69,16 @@ function massConversion() {
     " pounds = " +
     roundedPounds +
     " kilos";
-  console.log(roundedKilo, "Pounds");
-  console.log(roundedPounds, "Kilograms");
+  // console.log(roundedKilo, "Pounds");
+  // console.log(roundedPounds, "Kilograms");
 }
 
 function convertFunction() {
   if (inputElement.value > 0) {
-    lengthConversion(),
-      volumeConversion(),
-      massConversion(),
-      (inputElement.value = "");
+    lengthConversion();
+    volumeConversion();
+    massConversion();
+    inputElement.value = "";
   } else {
     console.log("no user input available", inputElement.value);
   }
