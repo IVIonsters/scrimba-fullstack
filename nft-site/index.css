@@ -5,22 +5,22 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
 }
 
-header {
+header,
+.cryptoPunk {
   background-color: #5f29a3;
-  padding: 45px 0px;
-}
-
-p {
-  font-size: 16px;
+  color: whitesmoke;
 }
 
 /* Insanely Expensive */
 h1 {
   color: whitesmoke;
   font-size: 36px;
+}
+
+h1,
+h3 {
   margin: 0px;
 }
 
@@ -33,10 +33,11 @@ h2 {
 h3 {
   color: #d0aaff;
   font-size: 20px;
-  margin: 0px;
 }
 
-section {
+section,
+header,
+footer {
   padding: 45px 0px;
 }
 
@@ -57,22 +58,11 @@ a {
   border-bottom: 2px dotted #ef5839;
 }
 
-a:hover {
-  color: #d4b44c;
-  text-decoration: none;
-  border-bottom: 2px dotted #d4b44c;
-}
-
+a:hover,
 a:active {
   color: #d4b44c;
   text-decoration: none;
   border-bottom: 2px dotted #d4b44c;
-}
-
-/* cryptoPunk section */
-.cryptoPunk {
-  background-color: #5f29a3;
-  color: whitesmoke;
 }
 
 /* crypto container images */
@@ -89,7 +79,5 @@ a:active {
 /* Footer */
 footer {
   color: #5f29a3;
-  font-size: 16px;
   text-align: center;
-  padding: 45px 0px;
 }
