@@ -13,6 +13,11 @@ header,
   color: whitesmoke;
 }
 
+/* line height for text */
+p {
+  line-height: 23px;
+}
+
 /* Insanely Expensive */
 h1 {
   color: whitesmoke;
@@ -52,17 +57,57 @@ footer {
   width: 100%;
 }
 
-a {
+.craftingNFT {
   color: #ef5839;
   text-decoration: none;
   border-bottom: 2px dotted #ef5839;
 }
 
-a:hover,
-a:active {
+.craftingNFT:hover,
+.craftingNFT:active {
   color: #d4b44c;
   text-decoration: none;
   border-bottom: 2px dotted #d4b44c;
+}
+
+/* link styling */
+.buyNFT,
+.moreInfo,
+.aboutUs,
+.contact {
+  padding: 10px 19px;
+  border-radius: 4.6px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buyNFT {
+  background-color: #5f29a3;
+  color: whitesmoke;
+}
+
+.buyNFT:hover,
+.buyNFT:active,
+.moreInfo:hover,
+.moreInfo:active,
+.aboutUs:hover,
+.aboutUs:active,
+.contact:hover,
+.contact:active {
+  background-color: #f3e885;
+  color: #2b283a;
+}
+
+.moreInfo,
+.contact {
+  background-color: #f0e0ff;
+  color: #5f29a3;
+}
+
+.aboutUs {
+  background-color: whitesmoke;
+  color: #5f29a3;
 }
 
 /* crypto container images */
