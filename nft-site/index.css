@@ -13,11 +13,20 @@ header {
   padding: 45px 0px;
 }
 
+p {
+  font-size: 16px;
+}
+
 /* Insanely Expensive */
 h1 {
   color: whitesmoke;
   font-size: 36px;
   margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
 }
 
 /* also NFTS */
@@ -26,3 +35,45 @@ h3 {
   font-size: 20px;
   margin: 0px;
 }
+
+section {
+  padding: 45px 0px;
+}
+
+/* container settings */
+.container {
+  width: 620px;
+  margin: 0 auto;
+}
+
+/* purple sneaker image */
+.purpleSneaker {
+  width: 100%;
+}
+
+a {
+  color: #ef5839;
+  text-decoration: none;
+  border-bottom: 2px dotted #ef5839;
+}
+
+a:hover {
+  color: #d4b44c;
+  text-decoration: none;
+  border-bottom: 2px dotted #d4b44c;
+}
+
+a:active {
+  color: #d4b44c;
+  text-decoration: none;
+  border-bottom: 2px dotted #d4b44c;
+}
+
+/* cryptoPunk section */
+.cryptoPunk {
+  background-color: #5f29a3;
+  color: whitesmoke;
+}
+
+/* image widht 300px
+border radious 4.6px */
