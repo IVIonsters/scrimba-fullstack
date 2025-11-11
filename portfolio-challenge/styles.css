@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +7,57 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
   text-align: center;
+  font-size: 21px;
 }
 
 /* container surrounding project */
 .mainContainer {
   width: 570px;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+h1 span,
+h2 span {
+  font-weight: bold;
+}
+
+h1 span {
+  font-size: 80px;
+}
+
+h2 span {
+  font-size: 60px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+.writtenBy {
+  font-size: 16px;
+}
+
+a {
+  color: #99d930;
+}
+
+a:hover {
+  color: #131313;
 }
