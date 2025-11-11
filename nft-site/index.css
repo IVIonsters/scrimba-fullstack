@@ -71,10 +71,7 @@ footer {
 }
 
 /* link styling */
-.buyNFT,
-.moreInfo,
-.aboutUs,
-.contact {
+.link {
   padding: 10px 19px;
   border-radius: 4.6px;
   font-weight: 500;
@@ -87,14 +84,8 @@ footer {
   color: whitesmoke;
 }
 
-.buyNFT:hover,
-.buyNFT:active,
-.moreInfo:hover,
-.moreInfo:active,
-.aboutUs:hover,
-.aboutUs:active,
-.contact:hover,
-.contact:active {
+.link:hover,
+.link:active {
   background-color: #f3e885;
   color: #2b283a;
 }
