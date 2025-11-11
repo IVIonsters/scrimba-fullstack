@@ -13,10 +13,9 @@ body {
   font-size: 21px;
 }
 
-/* container surrounding project */
-.mainContainer {
-  width: 570px;
+.container {
   margin: 0 auto;
+  width: 570px;
 }
 
 h1,
@@ -26,8 +25,11 @@ h3 {
 }
 
 h1 span,
-h2 span {
+h2 span,
+p span,
+time {
   font-weight: bold;
+  color: #99d930;
 }
 
 h1 span {
@@ -40,10 +42,12 @@ h2 span {
 
 h1 {
   font-size: 60px;
+  margin-bottom: 40px;
 }
 
 h2 {
   font-size: 42px;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -52,6 +56,8 @@ h3 {
 
 .writtenBy {
   font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 a {
@@ -60,4 +66,47 @@ a {
 
 a:hover {
   color: #131313;
+}
+
+/* upper section styling */
+.upper {
+  background-color: #252525;
+  padding: 100px 0px;
+  color: #fff;
+}
+
+/* Middle Section */
+.center {
+  background-color: whitesmoke;
+  padding: 100px 0px;
+}
+
+/* Lower Section */
+.lower {
+  background-color: #252525;
+  color: #fff;
+  padding: 100px 0px;
+}
+
+/*  button styling */
+button {
+  padding: 15px;
+  background-color: #99d930;
+  color: #252525;
+  border: none;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+
+button:hover {
+  background-color: #252525;
+  color: #fff;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  height: 1px;
+  color: #c4c4c4;
 }

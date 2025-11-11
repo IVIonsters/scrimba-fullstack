@@ -13,29 +13,53 @@
     />
   </head>
   <body>
-    <div class="mainContainer">
-      <h1>Hello, my name is <span>Sophie</span></h1>
-      <img
-        src="./img/sophie.png"
-        alt="image of graphic designer Sophie"
-      />
-      <h2>I am a <span>graphic designer</span></h2>
-      <p>
-        Ultricies morbi urna lectus magna quisque ultricies velit enim nisi mi
-        volutpat amet id id porta auctor at viverra consequat turpis quam enim
-        amet vulputate.
-      </p>
+    <header class="upper">
+      <div class="container">
+        <h1>Hello, my name is <span>Sophie</span></h1>
+        <img
+          src="./img/sophie.png"
+          alt="image of graphic designer Sophie"
+        />
+      </div>
+    </header>
 
-      <h2>My most recent <span>article</span></h2>
-      <article>
-        <h3>Design systems that scale</h3>
-        <p class="writtenBy">Writen by Sophie on June 19, 2020</p>
+    <section class="center">
+      <div class="container">
+        <h2>
+          <hr />
+          I am a <span><br />graphic designer</span>
+          <hr />
+        </h2>
         <p>
           Ultricies morbi urna lectus magna quisque ultricies velit enim nisi mi
-          volutpat amet id id porta auctor at viverra consequat turpis quam
-          enim... <a href="#">continue reading</a>
+          volutpat amet id id porta auctor at viverra consequat turpis quam enim
+          amet vulputate.
         </p>
-      </article>
-    </div>
+        <button>see my work</button>
+      </div>
+    </section>
+
+    <section class="lower">
+      <div class="container">
+        <h2>
+          <hr />
+          My most recent <span><br />article</span>
+          <hr />
+        </h2>
+        <article>
+          <h3>Design systems that scale</h3>
+          <p class="writtenBy">
+            Writen by <span class="name">Sophie</span> on
+            <time datetime="2020-06-19">June 19, 2020</time>
+          </p>
+          <p>
+            Ultricies morbi urna lectus magna quisque ultricies velit enim nisi
+            mi volutpat amet id id porta auctor at viverra consequat turpis quam
+            enim... <a href="#">continue reading</a>
+          </p>
+          <button>see all my articles</button>
+        </article>
+      </div>
+    </section>
   </body>
 </html>
