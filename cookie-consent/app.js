@@ -20,9 +20,7 @@ consentForm.addEventListener("submit", (event) => {
   event.preventDefault();
   modalText.innerHTML = `<div class=modal-inner-loading><img src=images/loading.svg><p id=uploadingText>Uploading your data to the dark web...</p></div>`;
 
-  const uploadText = document.getElementById("uploadingText");
-
   setTimeout(() => {
-    uploadText.textContent = `Making the sale..`;
+    document.getElementById("uploadingText").textContent = `Making the sale..`;
   }, 1500);
 });
