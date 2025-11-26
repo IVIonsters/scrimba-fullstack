@@ -4,7 +4,7 @@ const closeBtn = document.getElementById("modal-close-btn");
 const modalText = document.getElementById("modal-text");
 const consentForm = document.getElementById("consent-form");
 const declineBtn = document.getElementById("declineBtn");
-const buttons = document.getElementById("modal-choice-btn");
+const buttons = document.getElementById("modal-choice-btns");
 
 // set modal display time
 setTimeout(() => {
@@ -22,16 +22,6 @@ declineBtn.addEventListener("mouseover", () => {
   buttons.classList.toggle("reverse");
   console.log("hovered");
 });
-
-/*   
-Challenge: 
-1. Take control of the div holding the buttons.
-2. In index.css, set up a selector for a new class
-   that uses flex-direction to reverse the order 
-   of its child elements.
-3. Toggle that class on the div holding the buttons 
-   when a user's cursor hovers over the decline button.
-*/
 
 // Change modal text
 consentForm.addEventListener("submit", (event) => {
