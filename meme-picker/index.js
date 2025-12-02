@@ -170,12 +170,14 @@ const catsData = [
 ];
 
 function getEmotionsArray(cats) {
-  /*
-Challenge:
-1. Set up a "for of" in getEmotionsArray to iterate 
-   over the data.
-2. For now, just log out each cat object individually.
-*/
+  const emotionsArray = [];
+
+  for (const cat of cats) {
+    for (const emotion of cat.emotionTags) {
+      emotionsArray.push(emotion);
+    }
+  }
+  return emotionsArray;
 }
 
 getEmotionsArray(catsData);
