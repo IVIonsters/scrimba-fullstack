@@ -180,4 +180,26 @@ function getEmotionsArray(cats) {
   return emotionsArray;
 }
 
-getEmotionsArray(catsData);
+function renderEmotionsRadios(cats) {
+  const emotions = getEmotionsArray(cats);
+  let emotionsHTML = "";
+
+  for (let emotion of emotions) {
+    emotionsHTML += `<p>${emotion}</p>`;
+  }
+
+  document.getElementById("emotion-radios").innerHTML = emotionsHTML;
+  console.log(emotions);
+}
+
+renderEmotionsRadios(catsData);
+
+/*
+Challenge:
+
+
+3. Iterate over "emotions" and put each emotion 
+   in a <p> tag and then add them to the let you 
+   created in step 2. 
+4. Render the string to the 'emotion-radios' div.
+*/
