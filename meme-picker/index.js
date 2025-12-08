@@ -20,8 +20,8 @@ function renderEmotionsRadios(cats) {
     <div class="radio">
       <input
       type="radio"
-      value="emotion"
-      id="emotion"
+      value="${emotion}"
+      id="${emotion}"
       name="choice-emotion"
       >
       <label for="emotion">${emotion}</label>
@@ -33,19 +33,3 @@ function renderEmotionsRadios(cats) {
 }
 
 renderEmotionsRadios(catsData);
-
-/*
-Challenge:
-1. Swap out `<p>${emotion}</p>` for HTML
-   that will render a radio input for each
-   emotion. Remember to use "type", "id", 
-   "value", and "name" properties on each radio.
-   ("id" and "value" can both be set to the
-   "emotion").
-2. Remember to give each radio a label.
-   (What property does a label need?)
-3. Enclose each individual radio input in this div:
-   <div class="radio">
-      **RADIO HERE**
-   </div>
-*/
