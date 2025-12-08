@@ -5,12 +5,23 @@ function getEmotionsArray(cats) {
 
   for (const cat of cats) {
     for (const emotion of cat.emotionTags) {
-      emotionsArray.push(emotion);
+      if (!emotionsArray.includes(emotion)) {
+        emotionsArray.push(emotion);
+      } else {
+        console.log("Duplicates Removed");
+      }
     }
   }
   return emotionsArray;
 }
-
+/*
+Challenge:
+1. Refactor this nested for of so that an 
+   emotion is only pushed to emotionsArray
+   if it is not already in emotionsArray.
+   Extra kudos if you use the "logical not"
+   operator - feel free to google it!
+*/
 function renderEmotionsRadios(cats) {
   const emotions = getEmotionsArray(cats);
   let emotionsHTML = "";
