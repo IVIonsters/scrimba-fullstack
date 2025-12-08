@@ -1,173 +1,4 @@
-const catsData = [
-  {
-    emotionTags: ["moody"],
-    isGif: false,
-    image: "angry.jpeg",
-    alt: "A cat looking moody",
-  },
-  {
-    emotionTags: ["moody", "insomniac"],
-    isGif: false,
-    image: "angry2.jpeg",
-    alt: "A cat looking moody",
-  },
-  {
-    emotionTags: ["moody"],
-    isGif: false,
-    image: "angry3.jpeg",
-    alt: "A cat looking moody",
-  },
-  {
-    emotionTags: ["confused", "sad"],
-    isGif: false,
-    image: "confused.jpeg",
-    alt: "A cat looking confused",
-  },
-  {
-    emotionTags: ["dominant", "moody"],
-    isGif: false,
-    image: "dominant.jpeg",
-    alt: "A cat looking dominant",
-  },
-  {
-    emotionTags: ["happy", "relaxed"],
-    isGif: false,
-    image: "happy.jpeg",
-    alt: "A cat looking happy",
-  },
-  {
-    emotionTags: ["hungry"],
-    isGif: false,
-    image: "hungry.jpeg",
-    alt: "A cat looking hungry",
-  },
-  {
-    emotionTags: ["hungry"],
-    isGif: false,
-    image: "hungry1.jpeg",
-    alt: "A cat looking hungry",
-  },
-  {
-    emotionTags: ["insomniac"],
-    isGif: false,
-    image: "insomnia.jpeg",
-    alt: "A cat looking insomniac",
-  },
-  {
-    emotionTags: ["insomniac"],
-    isGif: false,
-    image: "insomnia1.jpeg",
-    alt: "A cat looking insomniac",
-  },
-  {
-    emotionTags: ["relaxed"],
-    isGif: false,
-    image: "lazy.jpeg",
-    alt: "A cat looking lazy",
-  },
-  {
-    emotionTags: ["scared"],
-    isGif: false,
-    image: "nervous.jpeg",
-    alt: "A cat looking nervous",
-  },
-  {
-    emotionTags: ["sad"],
-    isGif: false,
-    image: "sad.jpeg",
-    alt: "A cat looking sad",
-  },
-  {
-    emotionTags: ["sad", "moody"],
-    isGif: false,
-    image: "sad1.jpeg",
-    alt: "A cat looking sad",
-  },
-  {
-    emotionTags: ["moody"],
-    isGif: true,
-    image: "angry.gif",
-    alt: "A cat looking moody",
-  },
-  {
-    emotionTags: ["moody"],
-    isGif: true,
-    image: "angry2.gif",
-    alt: "A cat looking angry",
-  },
-  {
-    emotionTags: ["confused"],
-    isGif: true,
-    image: "confused2.gif",
-    alt: "A cat looking confused",
-  },
-  {
-    emotionTags: ["dominant"],
-    isGif: true,
-    image: "dominant.gif",
-    alt: "A cat looking dominant",
-  },
-  {
-    emotionTags: ["happy"],
-    isGif: true,
-    image: "happy.gif",
-    alt: "A cat looking happy",
-  },
-  {
-    emotionTags: ["hungry", "sad", "confused"],
-    isGif: true,
-    image: "confused.gif",
-    alt: "A cat looking hungry",
-  },
-  {
-    emotionTags: ["hungry"],
-    isGif: true,
-    image: "hungry.gif",
-    alt: "A cat looking hungry",
-  },
-  {
-    emotionTags: ["hungry"],
-    isGif: true,
-    image: "hungry2.gif",
-    alt: "A cat looking hungry",
-  },
-  {
-    emotionTags: ["insomniac", "scared"],
-    isGif: true,
-    image: "insomnia2.gif",
-    alt: "A cat looking insomniac",
-  },
-  {
-    emotionTags: ["relaxed"],
-    isGif: true,
-    image: "lazy.gif",
-    alt: "A cat looking relaxed",
-  },
-  {
-    emotionTags: ["relaxed"],
-    isGif: true,
-    image: "relaxed2.gif",
-    alt: "A cat looking relaxed",
-  },
-  {
-    emotionTags: ["scared", "sad"],
-    isGif: true,
-    image: "nervous.gif",
-    alt: "A cat looking nervous",
-  },
-  {
-    emotionTags: ["scared"],
-    isGif: true,
-    image: "nervous2.gif",
-    alt: "A cat looking scared",
-  },
-  {
-    emotionTags: ["sad"],
-    isGif: true,
-    image: "sad.gif",
-    alt: "A cat looking sad",
-  },
-];
+import { catsData } from "./data.js";
 
 function getEmotionsArray(cats) {
   const emotionsArray = [];
@@ -185,7 +16,16 @@ function renderEmotionsRadios(cats) {
   let emotionsHTML = "";
 
   for (let emotion of emotions) {
-    emotionsHTML += `<p>${emotion}</p>`;
+    emotionsHTML += `
+    <div class="radio">
+      <input
+      type="radio"
+      value="emotion"
+      id="emotion"
+      name="choice-emotion"
+      >
+      <label for="emotion">${emotion}</label>
+    </div>`;
   }
 
   document.getElementById("emotion-radios").innerHTML = emotionsHTML;
@@ -196,10 +36,16 @@ renderEmotionsRadios(catsData);
 
 /*
 Challenge:
-
-
-3. Iterate over "emotions" and put each emotion 
-   in a <p> tag and then add them to the let you 
-   created in step 2. 
-4. Render the string to the 'emotion-radios' div.
+1. Swap out `<p>${emotion}</p>` for HTML
+   that will render a radio input for each
+   emotion. Remember to use "type", "id", 
+   "value", and "name" properties on each radio.
+   ("id" and "value" can both be set to the
+   "emotion").
+2. Remember to give each radio a label.
+   (What property does a label need?)
+3. Enclose each individual radio input in this div:
+   <div class="radio">
+      **RADIO HERE**
+   </div>
 */
