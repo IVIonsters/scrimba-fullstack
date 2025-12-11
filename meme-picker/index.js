@@ -14,14 +14,7 @@ function getEmotionsArray(cats) {
   }
   return emotionsArray;
 }
-/*
-Challenge:
-1. Refactor this nested for of so that an 
-   emotion is only pushed to emotionsArray
-   if it is not already in emotionsArray.
-   Extra kudos if you use the "logical not"
-   operator - feel free to google it!
-*/
+
 function renderEmotionsRadios(cats) {
   const emotions = getEmotionsArray(cats);
   let emotionsHTML = "";
