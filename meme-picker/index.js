@@ -1,5 +1,16 @@
 import { catsData } from "./data.js";
 
+//Grab Needed Elements
+const emotionRadios = document.getElementById("emotion-radios");
+
+//Event Listeners
+emotionRadios.addEventListener("change", highlightCheckedOptions);
+
+// Accent Radio Function
+function highlightCheckedOptions(e) {
+  document.getElementById(e.target.id).classList.add("highlight");
+}
+
 function getEmotionsArray(cats) {
   const emotionsArray = [];
 
@@ -17,23 +28,22 @@ function getEmotionsArray(cats) {
 
 function renderEmotionsRadios(cats) {
   const emotions = getEmotionsArray(cats);
-  let emotionsHTML = "";
+  let emotionsHTML = ``;
 
   for (let emotion of emotions) {
     emotionsHTML += `
-    <div class="radio">
-      <input
-      type="radio"
-      value="${emotion}"
-      id="${emotion}"
-      name="choice-emotion"
-      >
-      <label for="emotion">${emotion}</label>
-    </div>`;
+        <div class="radio">
+            <label for="${emotion}">${emotion}</label>
+            <input
+            type="radio"
+            id="${emotion}"
+            value="${emotion}"
+            name="emotions"
+            >
+        </div>`;
   }
 
-  document.getElementById("emotion-radios").innerHTML = emotionsHTML;
-  console.log(emotions);
+  emotionRadios.innerHTML = emotionsHTML;
 }
 
 renderEmotionsRadios(catsData);
